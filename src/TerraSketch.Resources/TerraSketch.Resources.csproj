@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{520E3F83-EBED-4C6A-A43F-749B5FC70096}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TerraSketch.Resources</RootNamespace>
+    <AssemblyName>TerraSketch.Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSourcesMananger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TerraSketch.DataObjects.Abstract\TerraSketch.DataObjects.Abstract.csproj">
+      <Project>{E809E83A-36A8-41B6-9D03-0C1A8F30BA2B}</Project>
+      <Name>TerraSketch.DataObjects.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.DataObjects\TerraSketch.DataObjects.csproj">
+      <Project>{AAAB98A9-623E-4EA7-92DF-9CE7CF653D90}</Project>
+      <Name>TerraSketch.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.FluentBuilders\TerraSketch.FluentBuilders.csproj">
+      <Project>{2A1CA38B-5C9F-498D-A75A-F0D2FCC3FFEE}</Project>
+      <Name>TerraSketch.FluentBuilders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Generators.Abstract\TerraSketch.Generators.Abstract.csproj">
+      <Project>{8BAA1F51-6993-4A65-B435-27DEAD43512D}</Project>
+      <Name>TerraSketch.Generators.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Generators\TerraSketch.Generators.csproj">
+      <Project>{84E448EA-C654-4CFB-85A5-F358D0B26F7F}</Project>
+      <Name>TerraSketch.Generators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Layer\TerraSketch.Layer.csproj">
+      <Project>{A84C0F2F-3C26-4C4C-AC25-45FFA55B9A89}</Project>
+      <Name>TerraSketch.Layer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

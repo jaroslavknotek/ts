@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C619435-8FCA-47E9-836A-740BBE434080}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TerraSketch.View</RootNamespace>
+    <AssemblyName>TerraSketch.View</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Private\mff\TerraSketch\bin\deploy\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DB686F6617664F02C49553D2F05B0B7A3DA003B3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TerraSketch.View_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABasePresenterCanvasWrapper.cs" />
+    <Compile Include="CommandBinder.cs" />
+    <Compile Include="FieldPresenterViewWrapper.cs" />
+    <Compile Include="FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWaitView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWaitView.Designer.cs">
+      <DependentUpon>FrmWaitView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsHelper\Drawer.cs" />
+    <Compile Include="GraphicsHelper\IGraphicalObject.cs" />
+    <Compile Include="GraphicsHelper\PlanarObjectPrinter.cs" />
+    <Compile Include="HeightmapPresenterViewWrapper.cs" />
+    <Compile Include="KeyMessageFilter.cs" />
+    <Compile Include="MasterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterView.Designer.cs">
+      <DependentUpon>MasterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterView.FieldView.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>MasterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterView.GLRelated.cs">
+      <DependentUpon>MasterView.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterView.HeightmapView.cs">
+      <SubType>Form</SubType>
+      <DependentUpon>MasterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWaitView.resx">
+      <DependentUpon>FrmWaitView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterView.resx">
+      <DependentUpon>MasterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="datasourcer\FieldPresenterViewWrapper.datasource" />
+    <Content Include="materials\opentk.mtl" />
+    <None Include="Properties\DataSources\HeightmapPresenterViewWrapper.datasource" />
+    <None Include="Properties\DataSources\TerraSketch.VisualPresenters.IVisual3DView.datasource" />
+    <None Include="Properties\DataSources\TerraSketch.VisualPresenters.Visualization3DPresenter.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="datasourcer\TerraSketch.DataObjects.FieldObjects.FieldType.ABaseType.datasource" />
+    <None Include="datasourcer\TerraSketch.DataObjects.FieldObjects.FieldType.TypeWrapper1.datasource" />
+    <None Include="datasourcer\TerraSketch.DataObjects.ParameterObjects.FieldParameters.datasource" />
+    <None Include="datasourcer\TerraSketch.DataObjects.ParameterObjects.WorldParameters1.datasource" />
+    <None Include="datasourcer\TerraSketch.Presenters.FieldPresenter.datasource" />
+    <Content Include="shaders\fs.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="shaders\fs_norm.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="shaders\fs_tex.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="shaders\opentk.mtl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="shaders\vs.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="shaders\vs_norm.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="shaders\vs_tex.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="TerraSketch.DataObjects.ParameterObjects.IWorldBindableParameters.datasource" />
+    <None Include="TerraSketch.DataObjects.ParameterObjects.IWorldParameters.datasource" />
+    <None Include="TerraSketch.Presenters.HeightMapPresenter.datasource" />
+    <None Include="TerraSketch.Presenters.MasterPresenter.datasource" />
+    <None Include="TerraSketch.View_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.DataObjects\Common.DataObjects.csproj">
+      <Project>{24032ffc-bf54-418b-99eb-d2ce11c0be09}</Project>
+      <Name>Common.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.MathUtils\Common.MathUtils.csproj">
+      <Project>{084a412d-e723-4199-9c42-2a9cf88725cc}</Project>
+      <Name>Common.MathUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.BitmapRenderer\TerraSketch.BitmapRendering.csproj">
+      <Project>{9571a73e-a9d2-4783-9d4e-07ae81f3557a}</Project>
+      <Name>TerraSketch.BitmapRendering</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.DataObjects\TerraSketch.DataObjects.csproj">
+      <Project>{aaab98a9-623e-4ea7-92df-9ce7cf653d90}</Project>
+      <Name>TerraSketch.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.HeightmapTools\TerraSketch.Heightmap.Tools.csproj">
+      <Project>{4d8b1083-11b8-49fe-979b-86c39c040fbb}</Project>
+      <Name>TerraSketch.Heightmap.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Layer\TerraSketch.Layer.csproj">
+      <Project>{A84C0F2F-3C26-4C4C-AC25-45FFA55B9A89}</Project>
+      <Name>TerraSketch.Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Presenter3D\TerraSketch.VisualPresenters.csproj">
+      <Project>{c77a8187-8d68-415f-9477-9f113c495284}</Project>
+      <Name>TerraSketch.VisualPresenters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Presenters\TerraSketch.Presenters.csproj">
+      <Project>{e7eb917f-fd90-483a-afea-925d9a44c4f3}</Project>
+      <Name>TerraSketch.Presenters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voronoi.Generator\Voronoi.Generator.csproj">
+      <Project>{f8ab8eee-cfff-405e-8724-c5f8a1635914}</Project>
+      <Name>Voronoi.Generator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7EB917F-FD90-483A-AFEA-925D9A44C4F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TerraSketch.Presenters</RootNamespace>
+    <AssemblyName>TerraSketch.Presenters</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABasePresenter.cs" />
+    <Compile Include="Actions\AUpdatableMouseAction.cs" />
+    <Compile Include="Actions\IClickAction.cs" />
+    <Compile Include="Actions\IUpdatableMouseAction.cs" />
+    <Compile Include="Actions\ScalePointsClickAction.cs" />
+    <Compile Include="Actions\RotatePointsClickAction.cs" />
+    <Compile Include="Actions\TranslatePointsClickAction.cs" />
+    <Compile Include="Actions\NewFieldClickAction.cs" />
+    <Compile Include="CommandWrapper.cs" />
+    <Compile Include="FieldPresenter.Commands.cs">
+      <DependentUpon>FieldPresenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FieldPresenter.cs" />
+    <Compile Include="FieldPresenter.Designer.cs">
+      <DependentUpon>FieldPresenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeightmapPainter.cs" />
+    <Compile Include="HeightMapPresenter.Commands.cs">
+      <DependentUpon>HeightMapPresenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeightMapPresenter.cs" />
+    <Compile Include="HeightMapPresenter.Designer.cs">
+      <DependentUpon>HeightMapPresenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ICommandWrapper.cs" />
+    <Compile Include="Interfaces\IFieldView.cs" />
+    <Compile Include="Interfaces\IHeightmapView.cs" />
+    <Compile Include="Interfaces\IMasterView.cs" />
+    <Compile Include="Interfaces\IPresenterZoomable.cs" />
+    <Compile Include="Interfaces\IRefreshableView.cs" />
+    <Compile Include="Interfaces\ZoomChangedEventHandler.cs" />
+    <Compile Include="MasterPresenter.Commands.cs">
+      <DependentUpon>MasterPresenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPresenter.cs" />
+    <Compile Include="MasterPresenter.Designer.cs">
+      <DependentUpon>MasterPresenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZoomManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.DataObjects\Common.DataObjects.csproj">
+      <Project>{24032FFC-BF54-418B-99EB-D2CE11C0BE09}</Project>
+      <Name>Common.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.MathUtils\Common.MathUtils.csproj">
+      <Project>{084A412D-E723-4199-9C42-2A9CF88725CC}</Project>
+      <Name>Common.MathUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.DataObjects.Abstract\TerraSketch.DataObjects.Abstract.csproj">
+      <Project>{E809E83A-36A8-41B6-9D03-0C1A8F30BA2B}</Project>
+      <Name>TerraSketch.DataObjects.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.DataObjects.Export\TerraSketch.DataObjects.Export.csproj">
+      <Project>{689BF891-E2FB-423E-9EF2-AB01256674A1}</Project>
+      <Name>TerraSketch.DataObjects.Export</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.DataObjects.SaveLoad\TerraSketch.DataObjects.SaveLoad.csproj">
+      <Project>{8BE948D3-AF55-4551-B7BE-AEC3C8B6AF72}</Project>
+      <Name>TerraSketch.DataObjects.SaveLoad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.DataObjects\TerraSketch.DataObjects.csproj">
+      <Project>{aaab98a9-623e-4ea7-92df-9ce7cf653d90}</Project>
+      <Name>TerraSketch.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.FluentBuilders\TerraSketch.FluentBuilders.csproj">
+      <Project>{2A1CA38B-5C9F-498D-A75A-F0D2FCC3FFEE}</Project>
+      <Name>TerraSketch.FluentBuilders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Generators.Abstract\TerraSketch.Generators.Abstract.csproj">
+      <Project>{8BAA1F51-6993-4A65-B435-27DEAD43512D}</Project>
+      <Name>TerraSketch.Generators.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Generators\TerraSketch.Generators.csproj">
+      <Project>{84E448EA-C654-4CFB-85A5-F358D0B26F7F}</Project>
+      <Name>TerraSketch.Generators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Heightmap.Composer\TerraSketch.Heightmap.Composer.csproj">
+      <Project>{22252CBB-FCB2-4C9F-AA3D-AA1C463604D4}</Project>
+      <Name>TerraSketch.Heightmap.Composer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.HeightmapTools\TerraSketch.Heightmap.Tools.csproj">
+      <Project>{4D8B1083-11B8-49FE-979B-86C39C040FBB}</Project>
+      <Name>TerraSketch.Heightmap.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Layer\TerraSketch.Layer.csproj">
+      <Project>{A84C0F2F-3C26-4C4C-AC25-45FFA55B9A89}</Project>
+      <Name>TerraSketch.Layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Logging\TerraSketch.Logging.csproj">
+      <Project>{D2AFA647-F009-4B60-B41A-FE5FBB24EDED}</Project>
+      <Name>TerraSketch.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Presenter3D\TerraSketch.VisualPresenters.csproj">
+      <Project>{C77A8187-8D68-415F-9477-9F113C495284}</Project>
+      <Name>TerraSketch.VisualPresenters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TerraSketch.Resources\TerraSketch.Resources.csproj">
+      <Project>{520E3F83-EBED-4C6A-A43F-749B5FC70096}</Project>
+      <Name>TerraSketch.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Voronoi.Generator\Voronoi.Generator.csproj">
+      <Project>{F8AB8EEE-CFFF-405E-8724-C5F8A1635914}</Project>
+      <Name>Voronoi.Generator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
