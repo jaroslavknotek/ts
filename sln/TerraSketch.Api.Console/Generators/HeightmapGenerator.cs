@@ -11,9 +11,6 @@ namespace TerraSketch.Generators
 
         public HeightmapGenerator(INoise np, ILayerLocalParameters lp) : base(np, lp) { }
 
-
-
-
         public override Task<ILayerMasked> GenerateLayer()
         {
             return Task.Factory.StartNew(() =>

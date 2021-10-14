@@ -3,8 +3,6 @@ using TerraSketch.Generators.Abstract;
 
 namespace TerraSketch.Generators.Noise
 {
-
-
     public class NoiseParameters : INoiseParameters
     {
         public float Lacunarity { get; set; }
@@ -24,5 +22,4 @@ namespace TerraSketch.Generators.Noise
             Lacunarity = 2;
         }
     }
-
 }
