@@ -1,0 +1,17 @@
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\obj\Debug\net5.0\TerraSketch.ConsoleApi.csprojAssemblyReference.cache
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\obj\Debug\net5.0\TerraSketch.ConsoleApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\obj\Debug\net5.0\TerraSketch.ConsoleApi.AssemblyInfoInputs.cache
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\obj\Debug\net5.0\TerraSketch.ConsoleApi.AssemblyInfo.cs
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\obj\Debug\net5.0\TerraSketch.ConsoleApi.csproj.CoreCompileInputs.cache
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\bin\Debug\net5.0\TerraSketch.ConsoleApi.exe
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\bin\Debug\net5.0\TerraSketch.ConsoleApi.dll.config
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\bin\Debug\net5.0\TerraSketch.ConsoleApi.deps.json
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\bin\Debug\net5.0\TerraSketch.ConsoleApi.runtimeconfig.json
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\bin\Debug\net5.0\TerraSketch.ConsoleApi.runtimeconfig.dev.json
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\bin\Debug\net5.0\TerraSketch.ConsoleApi.dll
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\bin\Debug\net5.0\ref\TerraSketch.ConsoleApi.dll
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\bin\Debug\net5.0\TerraSketch.ConsoleApi.pdb
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\obj\Debug\net5.0\TerraSketch.ConsoleApi.dll
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\obj\Debug\net5.0\ref\TerraSketch.ConsoleApi.dll
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\obj\Debug\net5.0\TerraSketch.ConsoleApi.pdb
+C:\Users\jk\source\ts\sln\TerraSketch.Api.Console\obj\Debug\net5.0\TerraSketch.ConsoleApi.genruntimeconfig.cache

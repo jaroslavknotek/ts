@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HY9nrh/o5cCez73uO291prNIRzV3H1eWTducKC5nCjSnpUlCrhMnoaf6fSne1cLrOUt7GhQswp1X9gXlKpskZg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jk\\source\\ts\\sln\\TerraSketch.Api.Console\\TerraSketch.ConsoleApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
